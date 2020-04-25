@@ -1,12 +1,14 @@
 import random
 
+#adding upper limit
+limit = 5
 #score tracking variables
 wins = losses = 0
 play_again = "y"
 while play_again == "y":
     # generate a random number
-    win_number = random.randint(1, 3)
-    guess = int(input("Chose a number between 1 and 3 to play:"))
+    win_number = random.randint(1, limit)
+    guess = int(input(f"Guess your luck number (between 1 and {limit}):"))
     print()
     print(f"The lucky number is {win_number}")
     if int(guess) == win_number:
